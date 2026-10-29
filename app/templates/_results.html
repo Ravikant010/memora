@@ -1,0 +1,20 @@
+{% if q and not results %}
+  <p class="empty">No matches{% if count == 0 %} — run the indexer first{% endif %}.</p>
+{% elif results %}
+  <div class="results-head">
+    <p>{{ results | length }} results for <strong>“{{ q }}”</strong></p>
+    <p class="muted">Ranked by cosine similarity</p>
+  </div>
+{% endif %}
+<div class="masonry">
+  {% for p in results %}
+    <a href="/photo/{{ p.id }}" target="_blank" class="card" style="--i: {{ loop.index0 }}"
+       data-score="{{ '%.3f' | format(p.score) }}">
+      <img src="/photo/{{ p.id }}" loading="lazy" alt="">
+      <span class="card-overlay">
+        <span class="rank">#{{ loop.index }}</span>
+        <span class="score">{{ "%.2f" | format(p.score) }}</span>
+      </span>
+    </a>
+  {% endfor %}
+</div>

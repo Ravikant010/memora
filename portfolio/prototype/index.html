@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Memora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  
+  <script src="assets/waves.js" defer></script>
+</head>
+<body class="">
+  
+<section class="stage">
+  <div class="stage-fx" aria-hidden="true">
+  <div class="glow glow-top"></div>
+  <div class="glow glow-left"></div>
+  <div class="glow glow-right"></div>
+  <div class="stars"></div>
+  <canvas class="waves"></canvas>
+</div>
+
+  <nav class="nav">
+    <a href="index.html" class="brand"><svg class="logo" width="30" height="26" viewBox="0 0 28 24" aria-hidden="true" fill="none" stroke-width="2.2" stroke-linecap="round">
+  <defs>
+    <linearGradient id="logo-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f97316"/>
+      <stop offset=".5" stop-color="#d946ef"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <g stroke="url(#logo-grad)">
+    <path d="M2 6c4-3 8 3 12 0s8-3 12 0"/>
+    <path d="M2 12c4-3 8 3 12 0s8-3 12 0"/>
+    <path d="M2 18c4-3 8 3 12 0s8-3 12 0"/>
+  </g>
+</svg><span>Memora</span></a>
+    <div class="nav-links">
+      <a href="#search">Search</a>
+      <a href="#how">How it works</a>
+      <a href="#privacy">Privacy</a>
+    </div>
+    <div class="nav-end">
+      <a href="#search" class="btn-outline" data-focus-search>Start searching</a>
+    </div>
+  </nav>
+
+  <header class="hero" id="search">
+    <p class="badge"><span aria-hidden="true">★</span> 5,000 photos embedded</p>
+    <h1>Find every memory<br>with Visual AI</h1>
+    <p class="lead">Describe a moment in any language — EmbeddingGemma finds it, entirely on your machine.</p>
+
+    <form action="index.html" method="get" class="palette">
+      <div class="palette-box">
+        <svg class="palette-icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M10.5 3a7.5 7.5 0 0 1 5.9 12.1l4.3 4.3-1.4 1.4-4.3-4.3A7.5 7.5 0 1 1 10.5 3Zm0 2a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Z"/>
+        </svg>
+        <input type="search" name="q" value="" autofocus autocomplete="off"
+               placeholder="kids playing in the rain…" aria-label="Search photos">
+        <kbd class="kbd">⌘K</kbd>
+        <button type="submit" class="btn-glass">Search</button>
+      </div>
+      <div class="scan" aria-hidden="true"></div>
+    </form>
+
+    <div class="chips">
+      
+        <button type="button" class="chip" data-q="dog playing frisbee">dog playing frisbee</button>
+      
+        <button type="button" class="chip" data-q="pizza on a table">pizza on a table</button>
+      
+        <button type="button" class="chip" data-q="people skiing">people skiing</button>
+      
+        <button type="button" class="chip" data-q="red bus">red bus</button>
+      
+        <button type="button" class="chip" data-q="cat on a laptop">cat on a laptop</button>
+      
+        <button type="button" class="chip" data-q="बच्चे फुटबॉल खेल रहे हैं">बच्चे फुटबॉल खेल रहे हैं</button>
+      
+      <a href="#how" class="learn">How it works <span aria-hidden="true">›</span></a>
+    </div>
+  </header>
+
+  <button type="button" class="orb" aria-label="Focus search"><span class="orb-rings" aria-hidden="true"><span></span><span></span><span></span></span>
+<span class="orb-core">
+  <svg width="46" height="46" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M12 2c.5 5.3 4.7 9.5 10 10-5.3.5-9.5 4.7-10 10-.5-5.3-4.7-9.5-10-10 5.3-.5 9.5-4.7 10-10Z"/>
+  </svg>
+</span></button>
+</section>
+
+<main class="container">
+  <section id="results">
+    
+<div class="masonry">
+  
+</div>
+  </section>
+
+  <section class="how" id="how">
+    <div class="how-fx" aria-hidden="true">
+      <div class="glow glow-left"></div>
+      <div class="glow glow-right"></div>
+      <div class="stars"></div>
+    </div>
+
+    <header class="how-head">
+      <p class="badge"><span aria-hidden="true">★</span> How it works</p>
+      <h2>One space for<br>words and pixels</h2>
+      <p class="lead">Photos and sentences are mapped into the same 256-dimensional space, so finding a memory is just measuring distance.</p>
+    </header>
+
+    <div class="pipeline">
+      <div class="rail" aria-hidden="true"><span class="rail-beam"></span></div>
+
+      <article class="step">
+        <span class="node"><span class="orb-rings"><span></span><span></span></span><span class="node-core">01</span></span>
+        <div class="viz viz-embed" aria-hidden="true">
+          <img src="img/1882.jpg" alt="">
+          <span class="viz-arrow">→</span>
+          <span class="bars"><span style="--h: 28%; --d: 0ms"></span><span style="--h: 26%; --d: 90ms"></span><span style="--h: 40%; --d: 180ms"></span><span style="--h: 30%; --d: 270ms"></span><span style="--h: 95%; --d: 360ms"></span><span style="--h: 60%; --d: 450ms"></span><span style="--h: 21%; --d: 540ms"></span><span style="--h: 43%; --d: 630ms"></span><span style="--h: 56%; --d: 720ms"></span><span style="--h: 47%; --d: 810ms"></span><span style="--h: 91%; --d: 900ms"></span><span style="--h: 77%; --d: 990ms"></span><span style="--h: 91%; --d: 1080ms"></span><span style="--h: 29%; --d: 1170ms"></span><span style="--h: 95%; --d: 1260ms"></span><span style="--h: 66%; --d: 1350ms"></span><span style="--h: 38%; --d: 1440ms"></span><span style="--h: 52%; --d: 1530ms"></span></span>
+        </div>
+        <h3>Embed every photo</h3>
+        <p>The vision encoder turns each image into 768 numbers. We keep the first 256 — Matryoshka training packs the meaning up front.</p>
+      </article>
+
+      <article class="step">
+        <span class="node"><span class="orb-rings"><span></span><span></span></span><span class="node-core">02</span></span>
+        <div class="viz viz-ask" aria-hidden="true">
+          <div class="mini-pill">
+            <svg width="16" height="16" viewBox="0 0 24 24"><path d="M10.5 3a7.5 7.5 0 0 1 5.9 12.1l4.3 4.3-1.4 1.4-4.3-4.3A7.5 7.5 0 1 1 10.5 3Zm0 2a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Z"/></svg>
+            <span class="typed"></span><span class="caret"></span>
+          </div>
+          <span class="viz-caption">text encoder → 256-d vector</span>
+        </div>
+        <h3>Ask in your words</h3>
+        <p>Your query lands in the same space as the photos, so “sunset” sits right beside sunsets — in any language.</p>
+      </article>
+
+      <article class="step">
+        <span class="node"><span class="orb-rings"><span></span><span></span></span><span class="node-core">03</span></span>
+        <div class="viz viz-rank" aria-hidden="true">
+          
+            
+            <div class="rank-row">
+              <img src="img/1882.jpg" alt="">
+              <div class="meter"><span style="--w: 71.0%"></span></div>
+              <span class="rank-score">0.71</span>
+            </div>
+          
+            
+            <div class="rank-row">
+              <img src="img/2545.jpg" alt="">
+              <div class="meter"><span style="--w: 63.0%"></span></div>
+              <span class="rank-score">0.63</span>
+            </div>
+          
+            
+            <div class="rank-row">
+              <img src="img/2404.jpg" alt="">
+              <div class="meter"><span style="--w: 55.00000000000001%"></span></div>
+              <span class="rank-score">0.55</span>
+            </div>
+          
+        </div>
+        <h3>Rank by similarity</h3>
+        <p>One dot product per photo — 5,000 comparisons in milliseconds, closest matches first.</p>
+      </article>
+    </div>
+
+    <article class="privacy" id="privacy">
+      <canvas class="waves" data-lines="22" data-calm aria-hidden="true"></canvas>
+      <div class="privacy-copy">
+        <h3>Nothing leaves your machine</h3>
+        <p>The model, the vectors and your photos all stay local. No API keys, no uploads, no cloud.</p>
+        <ul class="privacy-list">
+          <li>On-device model</li>
+          <li>Local SQLite index</li>
+          <li>Zero network calls</li>
+        </ul>
+      </div>
+      <div class="privacy-badge">
+        <span class="orb orb-mini" aria-hidden="true">
+          <span class="orb-rings"><span></span><span></span><span></span></span>
+          <span class="orb-core">
+            <svg width="34" height="34" viewBox="0 0 24 24"><path d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5Zm-3 8V7a3 3 0 1 1 6 0v3H9Z"/></svg>
+          </span>
+        </span>
+        <span class="btn-glass pill-static">100% local</span>
+      </div>
+    </article>
+  </section>
+</main>
+
+<dialog id="lightbox">
+  <form method="dialog"><button class="lightbox-close" aria-label="Close">×</button></form>
+  <img alt="">
+  <div class="lightbox-meta">
+    <span>Similarity</span>
+    <div class="meter"><span></span></div>
+    <span class="lightbox-score"></span>
+  </div>
+</dialog>
+
+<script>
+  const form = document.querySelector("form.palette");
+  const focusSearch = () => { form.q.focus(); form.q.select(); };
+
+  document.querySelectorAll(".chip").forEach((chip) =>
+    chip.addEventListener("click", () => {
+      form.q.value = chip.dataset.q;
+      form.requestSubmit();
+    })
+  );
+  document.querySelector("[data-focus-search]").addEventListener("click", (e) => {
+    e.preventDefault();
+    form.scrollIntoView({ behavior: "smooth", block: "center" });
+    focusSearch();
+  });
+  document.querySelector(".orb").addEventListener("click", () => {
+    form.scrollIntoView({ behavior: "smooth", block: "center" });
+    focusSearch();
+  });
+  document.addEventListener("keydown", (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+      e.preventDefault();
+      focusSearch();
+    }
+  });
+
+  const box = document.getElementById("lightbox");
+  document.addEventListener("click", (e) => {
+    const card = e.target.closest(".card");
+    if (!card || e.metaKey || e.ctrlKey) return;
+    e.preventDefault();
+    const score = parseFloat(card.dataset.score);
+    box.querySelector("img").src = card.href;
+    box.querySelector(".lightbox-score").textContent = score.toFixed(2);
+    box.querySelector(".meter span").style.width = Math.max(0, Math.min(1, score)) * 100 + "%";
+    box.showModal();
+  });
+  box.addEventListener("click", (e) => { if (e.target === box) box.close(); });
+
+  // "Ask" step: type a few example queries on a loop.
+  const typed = document.querySelector(".viz-ask .typed");
+  const phrases = ["golden retriever in snow", "मेरी बहन की शादी", "street food at night", "plage au coucher du soleil"];
+  let p = 0, i = 0, back = false;
+  (function tick() {
+    const word = [...phrases[p]];
+    typed.textContent = word.slice(0, i).join("");
+    if (!back && i === word.length) { back = true; return setTimeout(tick, 1600); }
+    if (back && i === 0) { back = false; p = (p + 1) % phrases.length; }
+    i += back ? -1 : 1;
+    setTimeout(tick, back ? 30 : 70);
+  })();
+</script>
+
+<script src="assets/results.js"></script>
+<script src="assets/proto.js"></script>
+</body>
+</html>
