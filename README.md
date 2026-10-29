@@ -5,6 +5,12 @@ Search your local photos by meaning ("dog on a beach at sunset", "मेरी �
 
 **Stack:** FastAPI + Jinja2 (server-rendered) + HTMX · SQLite + numpy for vectors · sentence-transformers.
 
+## ▶ Watch how it works
+
+[![Memora: how it works (76 s)](portfolio/memora-poster.png)](https://drive.google.com/file/d/1_0xsjTRdx0fb3K1t4V2As_ESU6H-S3Qy/view?usp=sharing)
+
+**[Watch the 76-second explainer on Google Drive](https://drive.google.com/file/d/1_0xsjTRdx0fb3K1t4V2As_ESU6H-S3Qy/view?usp=sharing)**: indexing, the shared text and image vector space, cosine ranking, the live app (with a Hindi query), and the stack.
+
 ## Setup
 
 ```bash
